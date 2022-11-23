@@ -1,3 +1,15 @@
 <h1>使用者列表</h1>
 
 <%= link_to "新增使用者", new_user_path  %>
+
+<ul>
+  <% @users.each do |u| %>
+    <li>
+      <%= link_to u.name, user_path(u) %>  
+      <%= link_to "修改", edit_user_path(u) %>  
+      <%= link_to "刪除", user_path(u), 
+          method: "DELETE", 
+          data: { confirm: "確定刪除嗎？" } %>  
+    </li>
+  <% end %>
+</ul>

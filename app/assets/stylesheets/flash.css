@@ -1,0 +1,9 @@
+.notice-flash {
+  background-color: green; 
+  color: white
+}
+
+.alert-flash {
+  background-color: red; 
+  color: white
+}
